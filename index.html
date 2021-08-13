@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Steganography</title>
+        <script src="http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+        <link rel="stylesheet" href="./styles.css">
+
+    </head>
+    <body>
+
+        <div>
+          <h2>Encode message</h2>
+          <canvas id="secretPic"></canvas>
+          <canvas id="openPic"></canvas>
+          <canvas id="resPic"></canvas>
+
+          <p><strong>Upload secret picture: </strong>
+            <input type="file" multiple="false" accept="image/*" onchange="uploadSecret()" id="secretInput">
+          </p>
+
+          <p><strong>Upload open picture: </strong>
+            <input type="file" multiple="false" accept="image/*" onchange="uploadOpen()" id="openInput">
+          </p>
+
+          <input type="button" value="Combine" onclick="combine()">
+
+        </div>
+
+        <div>
+          <h2>Decode message</h2>
+          <canvas id="lock"></canvas>
+          <canvas id="unlock"></canvas>
+          <p><strong>Upload encoded picture: </strong>
+            <input type="file" onchange="uploadLock()" multiple="false" accept="image/*" id="encode">
+          </p>
+          <input type="button" value="Decode" onclick="Decode()">
+        </div>
+        <script type="text/javascript" src="./index.js"></script>
+    </body>
+</html>
